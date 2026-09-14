@@ -26,7 +26,7 @@ function discover(text, currentUrl) {
       if (!raw || /^(?:data:|mailto:|tel:|javascript:)/i.test(raw)) continue;
       try {
         const resolved = new URL(raw, currentUrl);
-        if (resolved.origin !== ORIGIN) continue;
+        if (resolved.origin !== ORIGIN || resolved.pathname.startsWith("/cdn-cgi/")) continue;
         resolved.hash = "";
         resolved.search = "";
         if (!visited.has(resolved.pathname)) queue.push(resolved.pathname);
@@ -42,14 +42,15 @@ while (queue.length) {
   const url = new URL(pathname, ORIGIN);
   url.hash = "";
   url.search = "";
-  if (visited.has(url.pathname)) continue;
+  if (visited.has(url.pathname) || url.pathname.startsWith("/cdn-cgi/")) continue;
   visited.add(url.pathname);
 
   const response = await fetch(url, {
     headers: { "user-agent": "Yichen-Portfolio-Snapshot/1.0" }
   });
   if (!response.ok) {
-    throw new Error(`Failed to download ${url}: ${response.status}`);
+    console.warn(`Skipped ${url.pathname}: HTTP ${response.status}`);
+    continue;
   }
 
   const type = response.headers.get("content-type") || "";
@@ -57,9 +58,14 @@ while (queue.length) {
   await mkdir(path.dirname(destination), { recursive: true });
 
   if (/text|javascript|json|xml|svg/i.test(type) || /\.(?:html|css|js|json|svg)$/i.test(url.pathname)) {
-    const text = await response.text();
+    let text = await response.text();
+    if (/html/i.test(type) || /\.html$/i.test(url.pathname) || url.pathname === "/") {
+      text = text.replace(/<script[^>]+src=["'][^"']*\/cdn-cgi\/[^"']*["'][^>]*><\/script>/gi, "");
+    }
     await writeFile(destination, text, "utf8");
-    discover(text, url);
+    if (/html|css/i.test(type) || /\.(?:html|css)$/i.test(url.pathname) || url.pathname === "/") {
+      discover(text, url);
+    }
   } else {
     const bytes = Buffer.from(await response.arrayBuffer());
     await writeFile(destination, bytes);
