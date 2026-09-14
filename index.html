@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yichen Huang — Software Engineer portfolio featuring backend systems, web applications, automation, and software quality." />
+  <title>Yichen Huang — Software Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111317'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' font-weight='700' fill='%23c7ff4a'%3EYH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Yichen Huang home">
+      <span class="brand-mark">YH</span>
+      <span>Yichen Huang</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/prprtracy" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="nav-cta" href="https://www.linkedin.com/in/huang-yichen" target="_blank" rel="noreferrer">Let’s connect <span>↗</span></a>
+    </nav>
+    <button class="menu-button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="eyebrow reveal"><span class="status-dot"></span> Montréal, Canada · Open to software roles</div>
+      <h1 class="reveal delay-1">I build software that turns<br><span>messy workflows</span> into<br>reliable systems.</h1>
+      <div class="hero-bottom reveal delay-2">
+        <p>Software engineer focused on backend systems, web applications, automation, and practical AI integration.</p>
+        <a class="circle-link" href="#work" aria-label="View selected work"><span>View<br>work</span><b>↓</b></a>
+      </div>
+      <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+
+    <section class="marquee" aria-label="Areas of expertise">
+      <div class="marquee-track">
+        <span>Backend Systems</span><i>✦</i><span>Web Applications</span><i>✦</i><span>Automation</span><i>✦</i><span>Applied AI</span><i>✦</i><span>Software Quality</span><i>✦</i>
+        <span aria-hidden="true">Backend Systems</span><i aria-hidden="true">✦</i><span aria-hidden="true">Web Applications</span><i aria-hidden="true">✦</i><span aria-hidden="true">Automation</span><i aria-hidden="true">✦</i>
+      </div>
+    </section>
+
+    <section id="work" class="work section-shell light-section">
+      <div class="section-heading reveal">
+        <div><span class="index">01</span><span class="kicker">Selected work</span></div>
+        <h2>Engineering projects,<br>explained with context.</h2>
+      </div>
+
+      <article class="featured-project reveal">
+        <div class="project-copy">
+          <div class="project-number">CASE 01 / FEATURED</div>
+          <h3>Discord Community<br>Operations Bot</h3>
+          <p>Built and deployed across three Discord servers serving nearly 1,000 members, this system manages play-session credits, usage reports, staff settlements, account bindings, welcome experiences, and live member events.</p>
+          <div class="impact-strip" aria-label="Production impact">
+            <div><strong>3</strong><span>Discord<br>servers</span></div>
+            <div><strong>~1K</strong><span>Community<br>members</span></div>
+            <div><strong>22</strong><span>Slash<br>commands</span></div>
+          </div>
+          <ul class="tag-list" aria-label="Technologies">
+            <li>Python</li><li>discord.py</li><li>SQLite</li><li>Pillow</li>
+          </ul>
+          <div class="project-links"><a class="text-link" href="#discord-case">Explore case study <span>↘</span></a><a class="text-link" href="https://github.com/prprtracy/discord-bot-tracyused" target="_blank" rel="noreferrer">Source code <span>↗</span></a></div>
+        </div>
+        <figure class="dashboard-card discord-real-preview">
+          <div class="dash-top"><span><b></b><b></b><b></b></span><em>REAL DISCORD INTERFACE</em><i>● IN USE</i></div>
+          <div class="real-command-body">
+            <div class="real-command-image"><img src="assets/discord-command-menu.png" alt="Actual Discord slash-command menu showing the bot's report, settlement, add-hours, export, and account-binding commands" width="471" height="426" loading="lazy" /></div>
+            <figcaption class="real-command-notes">
+              <small>01 / IN THE PRODUCT</small>
+              <h4>Work happens<br>in Discord.</h4>
+              <p>An actual command menu from the deployed bot. Members report completed sessions; authorized staff add hours, settle balances, and export records.</p>
+              <div class="real-command-flow"><span>ADD HOURS</span><b>→</b><span>REPORT</span><b>→</b><span>SETTLE</span></div>
+              <span class="real-command-caption">Original interface · not a mockup</span>
+            </figcaption>
+          </div>
+        </figure>
+      </article>
+
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="card-visual feeding-screenshots" aria-label="Real screenshots from the Meimei Feeding App">
+            <div class="screen-phone screen-home"><img src="assets/meimei-home.png" alt="Meimei Feeding App home screen showing daily feeding progress" /></div>
+            <div class="screen-phone screen-history"><img src="assets/meimei-history.png" alt="Meimei Feeding App calendar history with completed, backfilled, skipped, and unconfirmed states" /></div>
+            <div class="screen-phone screen-inventory"><img src="assets/meimei-inventory.png" alt="Meimei Feeding App freezer inventory with quantities and storage locations" /></div>
+            <div class="real-use-label"><span>REAL APP</span><strong>Built for Meimei.<br>Used every day.</strong></div>
+          </div>
+          <div class="card-meta"><span>CASE 02 / PERSONAL PRODUCT</span><span>React · TypeScript · PWA</span></div>
+          <h3>Meimei Feeding App</h3>
+          <p>An offline-first PWA I built for my dog Meimei to plan daily raw meals, deduct freezer inventory, review feeding history, and prepare next-day thaw lists—with safe migrations, backup/restore, and 125 automated tests.</p>
+          <a href="https://meimei-feeding-app.vercel.app" target="_blank" rel="noreferrer" class="card-arrow" aria-label="Open live Meimei Feeding App">↗</a>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <a class="card-visual kronos-screenshot" href="kronos-audio.html" aria-label="Explore the Kronos Audio website case study">
+            <img src="assets/kronos-discovery-live.jpg" alt="Real Kronos Audio Discovery product page showing the site navigation, product details, and turntable photography" width="1328" height="755" loading="lazy" />
+            <span class="kronos-screenshot-caption">LIVE WEBSITE <b>↗</b></span>
+          </a>
+          <div class="card-meta"><span>CASE 03</span><span>Web · Content Systems · Production</span></div>
+          <h3>Kronos Audio Website</h3>
+          <p>I develop and maintain the production website for a Montréal-based high-end audio manufacturer, including product pages, news, press and distributor content. I also create technical assembly and packaging documentation across the product line.</p>
+          <div class="kronos-card-links"><a href="kronos-audio.html" class="kronos-live-link">Explore case study <span>↗</span></a><a href="https://www.kronosaudio.com/" target="_blank" rel="noopener noreferrer" class="kronos-live-link">Visit live website <span>↗</span></a></div>
+        </article>
+
+        <article class="project-card wide reveal">
+          <div class="card-visual power-visual"><span>pow(</span><b>x, y</b><span>)</span><div class="test-badge"><i>34 / 34</i><small>TESTS PASSING</small></div><div class="quality"><span>FLAKE8</span><span>PYLINT 10/10</span><span>SEMVER 1.1.0</span></div></div>
+          <div class="wide-copy"><div><div class="card-meta"><span>CASE 04</span><span>Python · Testing · Quality</span></div><h3>Power Function Calculator</h3></div><p>A numerically robust calculator engineered around explicit domain rules, regression testing, static analysis, and accessible interaction design.</p><a href="https://github.com/prprtracy/6011_F7" target="_blank" rel="noreferrer" class="card-arrow" aria-label="Open Power Function Calculator on GitHub">↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="discord-case" class="case-study section-shell dark-section">
+      <div class="case-intro reveal">
+        <div><span class="index">02</span><span class="kicker">Featured case study</span></div>
+        <p class="case-label">DISCORD OPERATIONS & TIME LEDGER BOT</p>
+        <h2>Operational bookkeeping,<br>inside the community.</h2>
+        <p class="case-lead">A Discord community was managing purchased playtime, completed sessions, and staff settlement manually. I built a Discord-native ledger that keeps balances consistent, restricts administrative actions, records every change, and automates the community events surrounding the workflow.</p>
+      </div>
+
+      <div class="case-stats reveal">
+        <div><small>DEPLOYMENT</small><strong>3 servers</strong><span>Production communities</span></div>
+        <div><small>REACH</small><strong>~1,000 members</strong><span>Across all servers</span></div>
+        <div><small>INTERFACE</small><strong>22 commands</strong><span>Native Discord UX</span></div>
+        <div><small>TENANCY</small><strong>Guild-scoped</strong><span>Server data isolation</span></div>
+      </div>
+
+      <div class="architecture reveal">
+        <div class="content-heading"><span>01 / ARCHITECTURE</span><h3>Modular, asynchronous,<br>guild-aware.</h3><p>The bot uses discord.py Cogs to separate ledger commands, per-server configuration, and community events. SQLite persistence and image rendering sit behind those interaction layers.</p></div>
+        <div class="architecture-map">
+          <div class="arch-row"><div class="arch-node primary"><small>INTERFACE</small><strong>Discord</strong><span>Slash commands + events</span></div><b>→</b><div class="arch-node"><small>RUNTIME</small><strong>discord.py Bot</strong><span>Async routing + permissions</span></div></div>
+          <div class="arch-line"></div>
+          <div class="arch-row triple"><div class="arch-node"><small>COG 01</small><strong>Ledger</strong><span>Hours + settlement</span></div><div class="arch-node"><small>COG 02</small><strong>Guild config</strong><span>Roles + channels</span></div><div class="arch-node"><small>COG 03</small><strong>Events</strong><span>Members + voice</span></div></div>
+          <div class="arch-line"></div>
+          <div class="arch-row"><div class="arch-node data"><small>PERSISTENCE</small><strong>SQLite</strong><span>Balances + bindings + history</span></div><b>+</b><div class="arch-node"><small>MEDIA</small><strong>Pillow renderer</strong><span>Dynamic welcome cards</span></div></div>
+        </div>
+      </div>
+
+      <div class="workflow reveal">
+        <div class="content-heading"><span>02 / LEDGER WORKFLOW</span><h3>Three balances,<br>one source of truth.</h3><p>Members can query their own remaining playtime through a private Discord response; staff manage the shared ledger through permission-gated commands.</p></div>
+        <div class="workflow-list">
+          <div><i>01</i><span><strong>Add hours</strong><small>Staff creates a profile or adds purchased service time.</small></span><em>/添加陪玩</em></div>
+          <div><i>02</i><span><strong>Report</strong><small>A completed session reduces available hours and increases pending settlement.</small></span><em>/报单</em></div>
+          <div><i>03</i><span><strong>Settle</strong><small>Authorized staff closes part or all of the pending balance.</small></span><em>/结算</em></div>
+          <div><i>04</i><span><strong>Audit</strong><small>Every add, report, edit, settlement, and deletion is retained.</small></span><em>/历史记录</em></div>
+        </div>
+      </div>
+
+      <div class="feature-showcase reveal">
+        <div class="content-heading"><span>03 / LIVE USE</span><h3>More than<br>a ledger.</h3><p>The running community uses the bot for daily time records and member lifecycle automation. These interface examples are reconstructed from supplied screenshots with identities replaced.</p></div>
+        <div class="showcase-grid">
+          <div class="welcome-demo"><small>NEW MEMBER EVENT</small><div class="welcome-panel"><i>DA</i><strong>demo_user</strong><span>just joined the server</span><em>Member #409</em></div><p>Personalized 960 × 540 welcome cards combine the member avatar, server count, background artwork, and a fault-tolerant fallback path.</p></div>
+          <div class="event-demo"><small>VOICE + MEMBER MONITOR</small><div class="event-line"><i>🎙</i><span><b>Member-A</b> entered<br>Rinin Lounge</span></div><div class="event-line"><i>🔀</i><span><b>Member-B</b> moved<br>Lounge A → Lounge B</span></div><div class="event-line"><i>🔇</i><span><b>Member-C</b> left<br>Voice Channel</span></div><p>Join, leave, and channel-switch events are routed to a configurable monitoring channel.</p></div>
+        </div>
+      </div>
+
+      <div class="engineering reveal">
+        <div class="content-heading"><span>04 / ENGINEERING</span><h3>Built for the cases<br>that happen after launch.</h3></div>
+        <div class="engineering-grid">
+          <div><span>⌁</span><h4>Guild-level isolation</h4><p>Every companion, account binding, setting, and history query is scoped by guild_id.</p></div>
+          <div><span>♙</span><h4>Role-based control</h4><p>Staff operations use a configurable Discord role with owner and server-admin safeguards.</p></div>
+          <div><span>↺</span><h4>Safe balance rules</h4><p>Reports are capped at remaining time; settlements cannot exceed the pending balance.</p></div>
+          <div><span>≡</span><h4>Complete audit trail</h4><p>Add, report, settle, edit, bind, and delete operations retain operator and timestamp context.</p></div>
+          <div><span>⇣</span><h4>Excel export</h4><p>Authorized staff can export a formatted XLSX snapshot directly through a private response.</p></div>
+          <div><span>⚡</span><h4>Non-blocking logs</h4><p>Operational logs run as background tasks with cache lookup, timeout, and permission handling.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section-shell light-section">
+      <div class="section-heading reveal"><div><span class="index">03</span><span class="kicker">About</span></div><h2>Software, systems,<br>and the work between.</h2></div>
+      <div class="about-grid reveal"><p>I’m a Montréal-based software engineer and MEng student at Concordia University. I enjoy taking ambiguous, real-world processes and shaping them into dependable software—from production websites and offline-first apps to automation and backend workflows.</p><div class="about-details"><div><small>EDUCATION</small><strong>MEng, Software Engineering</strong><span>Concordia University · Expected Apr 2027</span></div><div><small>FOCUS</small><strong>Backend · Full-stack · AI</strong><span>Open to new graduate opportunities</span></div><div><small>LINKS</small><a href="https://github.com/prprtracy" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/huang-yichen" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></div>
+    </section>
+  </main>
+
+  <footer>
+    <div><span class="footer-kicker">HAVE A ROLE OR PROJECT IN MIND?</span><h2>Let’s build something<br>that works.</h2></div>
+    <a href="https://www.linkedin.com/in/huang-yichen" target="_blank" rel="noreferrer" class="footer-circle">Connect<br><span>↗</span></a>
+    <div class="footer-bottom"><span>© <b id="year"></b> Yichen Huang</span><span>Designed & built with intention.</span><a href="#top">Back to top ↑</a></div>
+  </footer>
+  <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3b1a41f4908f85e',t:'MTc4OTQxMjQ5NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
